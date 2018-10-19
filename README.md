@@ -12,5 +12,5 @@ npm install
 ```bash
 npm start
 ```
-## Live wiev
+## Live view
 https://michalwarsaw.github.io/Notes/
