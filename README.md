@@ -1,6 +1,6 @@
 # Basic Notes apliaction
 
-Basic Webpack config
+Using Webpack and Bootstrap
 
 ## Installation
 
@@ -12,5 +12,3 @@ npm install
 ```bash
 npm start
 ```
-## Live view
-https://michalwarsaw.github.io/Notes/
