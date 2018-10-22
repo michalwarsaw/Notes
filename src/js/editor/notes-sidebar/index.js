@@ -21,7 +21,7 @@ const notesList = [
     },
 ];
 
-const generateNoteList = () => {
+const generateNoteList = () => { // function which genereting html
 
     const generateNoteHTML = note => {
         return `<li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -41,4 +41,4 @@ const generateNoteList = () => {
 
 generateNoteList();
 
-searchBox.init(() => generateNoteList());
+searchBox.init(() => generateNoteList()); // every time when input will be changed init() will be invoke generateNoteList()
