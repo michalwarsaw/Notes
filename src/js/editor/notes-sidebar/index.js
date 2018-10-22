@@ -19,14 +19,14 @@ const notesList = [
     },
 ];
 
-let html = notesList.map(note => {
+const generateNoteHTML = note => {
     return `<li class="list-group-item d-flex justify-content-between lh-condensed">
     <div>
        <h6 class="my-0">${note.title}</h6>
        <small class="text-muted">${note.lastModified}</small>
     </div>
-    </li>`
-});
-html = html.join(''); // ('') deleting the "," between <li>;
-notesListEl.innerHTML = html;
+    </li>`;
+};
 
+let html = notesList.map(note => generateNoteHTML(note)).join(''); // join('') is deleting the "," between <li>;
+notesListEl.innerHTML = html;
