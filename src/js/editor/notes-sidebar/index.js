@@ -1,3 +1,5 @@
+import * as searchBox from './search-box'; // import all functions from search-box and named as searchBox
+
 const notesListEl = document.querySelector('#notes-list');
 
 const notesList = [
@@ -30,7 +32,13 @@ const generateNoteList = () => {
         </li>`;
     };
     
-    const html = notesList.map(note => generateNoteHTML(note)).join(''); // join('') is deleting the "," between <li>;
+    const html = notesList
+        .filter(note => note.title.includes(searchBox.getSearchPhrase())) // filtering inputed phrase included in searchBox form between tittle
+        .map(note => generateNoteHTML(note)) // genereting html <li> filtered
+        .join(''); // join('') is deleting the "," between <li>;
     notesListEl.innerHTML = html;
 };
+
 generateNoteList();
+
+searchBox.init(() => generateNoteList());
