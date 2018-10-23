@@ -30,11 +30,16 @@ export let add = title => notesList.push({
     title,
     lastModified: '01/01/2018 12:00'
 });
+
+// Remove
+
 export let remove = (noteId) => {
     notesList = notesList.filter(note => note.id !== noteId) // returning the new noteList without note with noteId from parameter.
     console.log(`${noteId} - removed`);
     console.log(notesList);
 }
+
+// Save
 
 export let save = (noteId, noteContent) => {
     notesList.map(note => {

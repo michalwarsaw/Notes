@@ -1,15 +1,17 @@
 import * as notesActions from './../notes-actions';
+import DOM from './../dom';
 
-export let noteRemoveHandler =  (noteRemoveBtn, noteId) => {
-    noteRemoveBtn.addEventListener('click', function() {
+
+export let noteRemoveHandler =  (noteId) => {
+    DOM.noteRemoveBtn.addEventListener('click', function() {
         notesActions.remove(noteId);
     })
 }
-export let noteSaveHandler = (noteContentForm, noteId, noteContentEl) => {
-    noteContentForm.addEventListener('submit', function(event) {
+export let noteSaveHandler = (noteId) => {
+    DOM.noteContentForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const noteContent = noteContentEl.value;
+        const noteContent = DOM.noteContentEl.value;
         notesActions.save(noteId, noteContent);
     })
 
