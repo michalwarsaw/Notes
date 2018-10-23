@@ -3,32 +3,32 @@ let notesList = [
         id: 1,
         title: 'Note 1',
         body: '# sample body 1',
-        lastModified: '01/01/2018 12:00'
+        lastModified: 1540326489711
     },
     {
         id: 2,
         title: 'Note 2',
         body: '# sample body 2',
-        lastModified: '01/01/2018 12:00'
+        lastModified: 1540326489711
     },
     {
         id: 3,
         title: 'Note 3',
         body: '# sample body 3',
-        lastModified: '01/01/2018 12:00'
+        lastModified: 1540326489711
     },
     {
         id: 4,
         title: 'Note 4',
         body: '# sample body 4',
-        lastModified: '01/01/2018 12:00'
+        lastModified: 1540326489711
     },
 ];
 
 export let getAll = () => notesList;
 export let add = title => notesList.push({
     title,
-    lastModified: '01/01/2018 12:00'
+    lastModified: Date.now()
 });
 
 // Remove
@@ -45,7 +45,7 @@ export let save = (noteId, noteContent) => {
     notesList.map(note => {
         if (note.id === noteId) {
             note.body = noteContent;
-            note.lastModified = new Date();
+            note.lastModified = Date.now();
         }
         
         return note;

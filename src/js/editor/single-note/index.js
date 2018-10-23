@@ -2,8 +2,6 @@ import * as notesActions from './../notes-actions';
 import * as events from './single-note-events';
 import DOM from './../dom';
 
-
-
 const notes = notesActions.getAll();
 const firstNote = notes[0];
 const noteId = firstNote.id;
