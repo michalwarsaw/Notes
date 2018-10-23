@@ -42,18 +42,18 @@
          <div class="col-md-8">
             <div class="card">
                <div class="card-body">
-                  <h4 class="mb-3">Note title</h4>
+                  <h4 class="mb-3" id="note-title">Note title</h4>
 
                   <div>
-                     <button type="button" class="btn btn-secondary">Edit</button>
-                     <button type="button" class="btn btn-primary">View</button>
-                     <button type="button" class="btn btn-danger">Delete</button>
+                     <button type="button" class="btn btn-secondary" id="note-edit-btn">Edit</button>
+                     <button type="button" class="btn btn-primary" id="note-view-btn">Preview</button>
+                     <button type="button" class="btn btn-danger" id="note-delete-btn">Delete</button>
                   </div>
 
                   <hr class="mb-4">
 
-                  <form>
-                     <textarea class="form-control mb-4" rows="10" placeholder="Enter the notes..."></textarea>
+                  <form id="note-content-form">
+                     <textarea class="form-control mb-4" rows="10" placeholder="Enter the notes..." id="note-content"></textarea>
 
                      <hr class="mb-4">
                      <button class="btn btn-primary btn-lg btn-block" type="submit">Save changes</button>
