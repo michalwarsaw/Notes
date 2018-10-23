@@ -1,26 +1,10 @@
 import * as searchBox from './search-box'; // import all functions from search-box and named as searchBox
 import {normalizeText} from './../utilities'; 
+import * as addBox from './add-box';
+import * as notesActions from './../notes-actions';
 
 const notesListEl = document.querySelector('#notes-list');
 
-const notesList = [
-    {
-        title: 'Note 1',
-        lastModified: '01/01/2018 12:00'
-    },
-    {
-        title: 'Note 2',
-        lastModified: '01/01/2018 12:00'
-    },
-    {
-        title: 'Note 3',
-        lastModified: '01/01/2018 12:00'
-    },
-    {
-        title: 'Note 4',
-        lastModified: '01/01/2018 12:00'
-    },
-];
 
 const generateNoteList = () => { // function which genereting html
 
@@ -33,7 +17,8 @@ const generateNoteList = () => { // function which genereting html
         </li>`;
     };
     
-    const html = notesList
+    const html = notesActions
+        .getAll()
         .filter(note =>normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase()))) // filtering inputed phrase included in searchBox form tittle
         .map(note => generateNoteHTML(note)).join(''); // genereting html <li> filtered. join('') is deleting the "," between <li>
     notesListEl.innerHTML = html;
@@ -41,4 +26,5 @@ const generateNoteList = () => { // function which genereting html
 
 generateNoteList();
 
-searchBox.init(() => generateNoteList()); // every time when input will be changed init() will be invoke generateNoteList()
+searchBox.init(() => generateNoteList()); // every time when input from searchBox will be changed init() will be invoke generateNoteList()
+addBox.init(() => generateNoteList()); // every time when input from  addBox will be changed init() will be invoke generateNoteList()
