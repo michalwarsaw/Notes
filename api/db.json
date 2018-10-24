@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Note 1",
+      "body": "# sample body 1",
+      "lastModified": 1540326489711
+    },
+    {
+      "id": 2,
+      "title": "Note 2",
+      "body": "# sample body 2",
+      "lastModified": 1540326489711
+    },
+    {
+      "id": 3,
+      "title": "Note 3",
+      "body": "# sample body 3",
+      "lastModified": 1540326489711
+    },
+    {
+      "id": 4,
+      "title": "Note 4",
+      "body": "# sample body 4",
+      "lastModified": 1540326489711
+    }
+  ]
+}
