@@ -8,10 +8,11 @@ export let init = (onChangeCallBack) => {
 
         let noteTitle = document.querySelector('#note-add-input').value.trim(); // take the imput value while imputed, not on the begining
 
-        if (noteTitle) { // if noteTitle inputed invoke the add() from notesActions module
+        if (noteTitle) {
             notesActions.add(noteTitle)
-            onChangeCallBack();
+            .then(notes => {
+                onChangeCallBack();
+            })
         }
-
     })
 };

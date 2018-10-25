@@ -1,5 +1,3 @@
-import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3000'
-
+import './js/polyfills';
 import './scss/style.scss';
 import './js/app';

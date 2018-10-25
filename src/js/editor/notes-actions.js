@@ -1,37 +1,52 @@
-import axios from 'axios';
+import axios from "./axios-api";
 
-axios.get('/notes')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
+// Get Notes
 
-let notesList = [];
+export let getAll = () =>
+  new Promise((resolve, reject) => {
+    axios
+      .get("/notes")
+      .then(response => response.data)
+      .then(notes => resolve(notes))
+      .catch(error => console.log(error));
+  });
 
-export let getAll = () => notesList;
-export let add = (title) =>
-	notesList.push({
-		title,
-		lastModified: Date.now()
-	});
+// Add Notes
 
-// Remove
+export let add = title =>
+	new Promise((resolve, reject) => {
+	axios
+		.post("/notes", {
+			title,
+			lastModified: Date.now()
+		})
+		.then(response => response.data)
+		.then(notes => resolve(notes))
+		.catch(error => console.log(error));
+});
 
-export let remove = (noteId) => {
-	notesList = notesList.filter((note) => note.id !== noteId); // returning the new noteList without note with noteId from parameter.
-	console.log(`${noteId} - removed`);
-	console.log(notesList);
-};
+// Remove Notes
 
-// Save
+export let remove = noteId => 
+	new Promise((resolve, reject) => {
+		axios
+			.delete(`/notes${noteId}`)
+			.then(response => response.data)
+			.then(notes => resolve(notes))
+			.catch(error => console.log(error));
+});
 
-export let save = (noteId, noteContent) => {
-	notesList.map((note) => {
-		if (note.id === noteId) {
-			note.body = noteContent;
-			note.lastModified = Date.now();
-		}
 
-		return note;
-	});
-};
+// Save Notes
+
+export let save = (noteId, noteContent) =>
+	new Promise((resolve, reject) => {
+		axios
+			.patch(`/notess${noteId}`, {
+				body: noteContent,
+				lastModified: Date.now()
+			})
+			.then(response => response.data)
+			.then(notes => resolve(notes))
+			.catch(error => console.log(error));
+});
