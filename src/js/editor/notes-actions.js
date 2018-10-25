@@ -30,7 +30,7 @@ export let add = title =>
 export let remove = noteId => 
 	new Promise((resolve, reject) => {
 		axios
-			.delete(`/notes${noteId}`)
+			.delete(`/notes/${noteId}`)
 			.then(response => response.data)
 			.then(notes => resolve(notes))
 			.catch(error => console.log(error));
@@ -42,7 +42,7 @@ export let remove = noteId =>
 export let save = (noteId, noteContent) =>
 	new Promise((resolve, reject) => {
 		axios
-			.patch(`/notess${noteId}`, {
+			.patch(`/notes/${noteId}`, {
 				body: noteContent,
 				lastModified: Date.now()
 			})
