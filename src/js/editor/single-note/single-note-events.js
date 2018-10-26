@@ -1,5 +1,5 @@
 import * as notesActions from './../notes-actions';
-import DOM from './../dom';
+import DOM from './../../dom';
 
 // Remove Notes
 
@@ -14,7 +14,7 @@ export let noteRemoveHandler =  (noteId) => {
 export let noteSaveHandler = (noteId) => {
     DOM.noteContentForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log(noteId);
+        
         const noteContent = DOM.noteContentEl.value;
         notesActions.save(noteId, noteContent);
     })

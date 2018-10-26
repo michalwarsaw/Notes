@@ -1,6 +1,6 @@
 import * as notesActions from './../notes-actions';
 import * as events from './single-note-events';
-import DOM from './../dom';
+import DOM from './../../dom';
 
 notesActions.getAll().then(notes => {
     const firstNote = notes[0];

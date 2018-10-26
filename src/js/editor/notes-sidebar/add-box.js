@@ -1,5 +1,5 @@
 import * as notesActions from './../notes-actions';
-import DOM from './../dom';
+import DOM from './../../dom';
 
 
 export let init = (onChangeCallBack) => {

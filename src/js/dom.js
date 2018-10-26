@@ -1,4 +1,5 @@
 export default {
+    container: document.querySelector('#view-container'),
     noteTotleEl: document.querySelector('#note-title'),
     noteContentEl: document.querySelector('#note-content'),
     noteContentForm: document.querySelector('#note-content-form'),

@@ -2,7 +2,7 @@ import * as searchBox from "./search-box"; // import all functions from search-b
 import { normalizeText } from "./../utilities";
 import * as addBox from "./add-box";
 import * as notesActions from "./../notes-actions";
-import DOM from "./../dom";
+import DOM from "./../../dom";
 import { format } from "date-fns";
 
 const generateNoteHTML = note => {
