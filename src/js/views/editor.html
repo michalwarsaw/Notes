@@ -1,0 +1,54 @@
+<div class="py-5 text-center">
+    <h1>Notes Aplication</h1>
+    <p class="lead">This is simple sketch and prototype of Notes app which is being built</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+
+        <form class="card p-2 mb-3">
+            <div class="form-group">
+                <label for="note-search-input">Search note... (title)</label>
+                <input type="text" class="form-control" id="note-search-input" placeholder="Search...">
+            </div>
+        </form>
+
+        <form class="card p-2 mb-3" id="note-add-form">
+            <label for="note-add-input">Add Note</label>
+            <div class="input-group">
+                <input type="text" id="note-add-input" class="form-control" placeholder="Enter the title...">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">Dodaj</button>
+                </div>
+            </div>
+        </form>
+
+        <ul id="notes-list" class="list-group mb-3"></ul>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3" id="note-title">Note title</h4>
+
+                <div>
+                    <button type="button" class="btn btn-secondary" id="note-edit-btn">Edit</button>
+                    <button type="button" class="btn btn-primary" id="note-view-btn">Preview</button>
+                    <button type="button" class="btn btn-danger" id="note-delete-btn">Delete</button>
+                </div>
+
+                <hr class="mb-4">
+
+                <form id="note-content-form">
+                    <textarea class="form-control mb-4" rows="10" placeholder="Enter the notes..." id="note-content"></textarea>
+
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2018 Notes Aplication</p>
+</footer>
