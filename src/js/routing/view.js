@@ -6,7 +6,7 @@ const getTemplate = url => new Promise(resolve => resolve(url));
 
 // Render the View
 
-const render = html => (DOM.container.innerHTML = html);
+const render = html => (DOM().container.innerHTML = html);
 
 // Load View
 

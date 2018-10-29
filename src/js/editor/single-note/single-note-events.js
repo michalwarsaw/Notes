@@ -4,7 +4,7 @@ import DOM from './../../dom';
 // Remove Notes
 
 export let noteRemoveHandler =  (noteId) => {
-    DOM.noteRemoveBtn.addEventListener('click', function() {
+    DOM().noteRemoveBtn.addEventListener('click', function() {
         notesActions.remove(noteId);
     })
 }
@@ -12,10 +12,10 @@ export let noteRemoveHandler =  (noteId) => {
 // Save Note
 
 export let noteSaveHandler = (noteId) => {
-    DOM.noteContentForm.addEventListener('submit', function(event) {
+    DOM().noteContentForm.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        const noteContent = DOM.noteContentEl.value;
+        const noteContent = DOM().noteContentEl.value;
         notesActions.save(noteId, noteContent);
     })
 

@@ -5,6 +5,8 @@ import * as notesActions from "./../notes-actions";
 import DOM from "./../../dom";
 import { format } from "date-fns";
 
+console.log(DOM());
+
 const generateNoteHTML = note => {
   return `<li class="list-group-item d-flex justify-content-between lh-condensed">
     <div>
@@ -28,11 +30,14 @@ const generateNoteList = () => {
       .map(note => generateNoteHTML(note))
       .join("");
 
-    DOM.notesListEl.innerHTML = html;
+    DOM().notesListEl.innerHTML = html;
   });
 };
+const init = () => {
+  generateNoteList();
+  
+  searchBox.init(() => generateNoteList()); // every time when input from searchBox will be changed init() will be invoke generateNoteList()
+  addBox.init(() => generateNoteList()); // every time when input from  addBox will be changed init() will be invoke generateNoteList()
 
-generateNoteList();
-
-searchBox.init(() => generateNoteList()); // every time when input from searchBox will be changed init() will be invoke generateNoteList()
-addBox.init(() => generateNoteList()); // every time when input from  addBox will be changed init() will be invoke generateNoteList()
+};
+export default init;
