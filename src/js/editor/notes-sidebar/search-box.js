@@ -1,4 +1,5 @@
-import DOM from './../../dom';
+import DOM from '../../dom';
+
 
 let searchPhrase = ''; // declaring an empty string
 

@@ -1,19 +1,20 @@
-import DOM from "../dom";
+import DOM from '../dom';
 
-// GET HTML tempate
-
+// Get HTML template
 const getTemplate = url => new Promise(resolve => resolve(url));
 
-// Render the View
-
+// Render the view
 const render = html => (DOM().container.innerHTML = html);
 
-// Load View
+// Load view
+// 1. Get HTML template
+// 2. Render the view
+// 3. Resolve()
 
 export const load = view =>
-  new Promise((resolve, reject) => {
-    getTemplate(view).then(html => {
-      render(html);
-      resolve();
-    });
-  });
+   new Promise((resolve, reject) => {
+      getTemplate(view).then(html => {
+         render(html);
+         resolve();
+      });
+   });

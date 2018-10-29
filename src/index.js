@@ -1,3 +1,4 @@
-import './js/polyfills';
 import './scss/style.scss';
+import './js/polyfills';
+
 import './js/app';

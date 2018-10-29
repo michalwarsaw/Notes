@@ -1,7 +1,6 @@
-import * as notesActions from './../notes-actions';
+import DOM from '../../dom';
+import * as notesActions from '../../notes-actions';
 import * as events from './single-note-events';
-import DOM from './../../dom';
-
 
 const init = () => {
     notesActions.getAll().then(notes => {

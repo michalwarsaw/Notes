@@ -1,20 +1,29 @@
 let DOM = {};
 
-export const DOMinit = () => {
-    DOM = {
-        container: document.querySelector('#view-container'),
-        noteTotleEl: document.querySelector('#note-title'),
-        noteContentEl: document.querySelector('#note-content'),
-        noteContentForm: document.querySelector('#note-content-form'),
-        noteEditBtn: document.querySelector('#note-edit-btn'),
-        notePreviewBtn: document.querySelector('#note-view-btn'),
-        noteRemoveBtn: document.querySelector('#note-delete-btn'),
-        addBoxForm: document.querySelector('#note-add-form'),
-        searchBoxInput: document.querySelector('#note-search-input'),
-        notesListEl: document.querySelector('#notes-list')
-    };
-    console.log(DOM)
+export const DOMInit = () => {
+   DOM = {
+      container: document.querySelector('#view-container'),
+
+      addBoxForm: document.querySelector('#note-add-form'),
+      addBoxInput: document.querySelector('#note-add-input'),
+      searchBoxInput: document.querySelector('#note-search-input'),
+      notesListEl: document.querySelector('#notes-list'),
+
+      noteTitleEl: document.querySelector('#note-title'),
+      noteContentForm: document.querySelector('#note-content-form'),
+      noteContentEl: document.querySelector('#note-content'),
+      noteContentPreviewEl: document.querySelector('#note-content-preview'),
+
+      noteEditorBtn: document.querySelector('#note-editor-btn'),
+      notePreviewBtn: document.querySelector('#note-preview-btn'),
+      noteRemoveBtn: document.querySelector('#note-remove-btn')
+   };
+
+   console.log(DOM);
 };
 
-const get = () => DOM;
+const get = () => {
+   return DOM;
+};
+
 export default get;

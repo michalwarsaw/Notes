@@ -1,29 +1,28 @@
 import * as view from './view';
-import { DOMinit } from './../dom';
+import { DOMInit } from '../dom';
 
-
-// Init
-
-import introInit from './../intro/index';
-import editorInit from './../editor/index';
-
+// Init modules
+import introInit from '../intro/index';
+import editorInit from '../editor/index';
 
 // Views
+import introView from '../views/intro.html';
+import editorView from '../views/editor.html';
 
-import introView from './../views/intro.html';
-import editorView from './../views/editor.html';
-
-DOMinit();
+DOMInit();
 
 export const index = () => {
-    view.load(introView).then(() => {
-        DOMinit();
-    });
+   view.load(introView).then(() => {
+      DOMInit();
+      introInit();
+   });
 };
 
 export const editor = () => {
-    view.load(editorView).then(() => {
-        DOMinit();
-    });
+   view.load(editorView).then(() => {
+      DOMInit();
+      editorInit();
+   });
 };
 
+export const notFound = () => {};

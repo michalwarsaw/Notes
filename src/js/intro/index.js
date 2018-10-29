@@ -1,1 +1,2 @@
-export const init = () => {};
+const init = () => {};
+export default init;
