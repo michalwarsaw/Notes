@@ -11,7 +11,7 @@ const generateNoteHTML = (note, activeNoteId) => {
    }" class="list-group-item list-group-item-action ${note.id === activeNoteId ? 'active' : ''}">
       <div>
          <h6 class="my-0">${note.title}</h6>
-         <small>Ostatnia edycja: ${format(note.lastModified, 'DD/MM/YYYY HH:mm:ss')}</small>
+         <small>Last modified: ${format(note.lastModified, 'DD/MM/YYYY HH:mm:ss')}</small>
       </div>
    </a>`;
 };
