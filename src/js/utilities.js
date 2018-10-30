@@ -1,1 +1,3 @@
-export let normalizeText = text => text.trim().toLowerCase(); // normalazing inputed text 
+export const normalizeText = text => {
+   return text.trim().toLowerCase();
+};

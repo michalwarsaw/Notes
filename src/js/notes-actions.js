@@ -1,52 +1,52 @@
-import axios from "./axios-api";
+import axios from './axios-api';
 
-// Get Notes
+// Getting all notes to notes-sidebar
+export const getAll = () => {
+   return new Promise((resolve, reject) => {
+      axios
+         .get('/notes')
+         .then(res => res.data)
+         .then(notes => resolve(notes))
+         .catch(err => console.log(err));
+   });
+}
 
-export let getAll = () =>
-  new Promise((resolve, reject) => {
-    axios
-      .get("/notes")
-      .then(response => response.data)
-      .then(notes => resolve(notes))
-      .catch(error => console.log(error));
-  });
+// Adding new note to notepad in notes-sidebar section
+export const add = title => {
+   return new Promise((resolve, reject) => {
+      axios
+         .post('/notes', {
+            title,
+            lastModified: Date.now(),
+            body: ''
+         })
+         .then(res => res.data)
+         .then(notes => resolve(notes))
+         .catch(err => console.log(err));
+   });
+}
 
-// Add Notes
+// Removing note in single-note section
+export const remove = noteId => {
+   return new Promise((resolve, reject) => {
+      axios
+         .delete(`/notes/${noteId}`)
+         .then(res => res.data)
+         .then(notes => resolve(notes))
+         .catch(err => console.log(err));
+   });
+}
 
-export let add = title =>
-	new Promise((resolve, reject) => {
-	axios
-		.post("/notes", {
-			title,
-			lastModified: Date.now()
-		})
-		.then(response => response.data)
-		.then(notes => resolve(notes))
-		.catch(error => console.log(error));
-});
-
-// Remove Notes
-
-export let remove = noteId => 
-	new Promise((resolve, reject) => {
-		axios
-			.delete(`/notes/${noteId}`)
-			.then(response => response.data)
-			.then(notes => resolve(notes))
-			.catch(error => console.log(error));
-});
-
-
-// Save Notes
-
-export let save = (noteId, noteContent) =>
-	new Promise((resolve, reject) => {
-		axios
-			.patch(`/notes/${noteId}`, {
-				body: noteContent,
-				lastModified: Date.now()
-			})
-			.then(response => response.data)
-			.then(notes => resolve(notes))
-			.catch(error => console.log(error));
-});
+// Saving selected note
+export const save = (noteId, noteContent) => {
+   return new Promise((resolve, reject) => {
+      axios
+         .patch(`/notes/${noteId}`, {
+            body: noteContent,
+            lastModified: Date.now()
+         })
+         .then(res => res.data)
+         .then(notes => resolve(notes))
+         .catch(err => console.log(err));
+   });
+}

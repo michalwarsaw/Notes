@@ -1,0 +1,60 @@
+<div class="row">
+   <div class="col-md-8 offset-md-2">
+      <div class="py-5 text-center">
+         <h2>Notes application</h2>
+         <p class="lead">This is simple Notes application built on JavaScript without any Framework based on Markdown text format</p>
+      </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-md-4 mb-4">
+
+      <form class="card p-2 mb-3">
+         <div class="form-group">
+            <label for="note-search-input">Find the note</label>
+            <input type="text" class="form-control" id="note-search-input" placeholder="Find...">
+         </div>
+      </form>
+
+      <form class="card p-2 mb-3" id="note-add-form">
+         <label for="note-add-input">Add the note</label>
+         <div class="input-group">
+            <input type="text" id="note-add-input" class="form-control" placeholder="Enter the title...">
+            <div class="input-group-append">
+               <button type="submit" class="btn btn-secondary">Add</button>
+            </div>
+         </div>
+      </form>
+
+      <div id="notes-list" class="list-group mb-3"></div>
+   </div>
+
+   <div class="col-md-8">
+      <div class="card">
+         <div class="card-body">
+            <h4 class="mb-3" id="note-title">Note title</h4>
+
+            <div>
+               <button type="button" class="btn btn-secondary" id="note-editor-btn">Editor</button>
+               <button type="button" class="btn btn-primary" id="note-preview-btn">Preview</button>
+               <button type="button" class="btn btn-danger" id="note-remove-btn">Delete</button>
+            </div>
+
+            <hr class="mb-4">
+
+            <form id="note-content-form">
+               <textarea class="form-control mb-4" id="note-content" rows="10" placeholder="Write the note..."></textarea>
+               <div id="note-content-preview"></div>
+
+               <hr class="mb-4">
+               <button class="btn btn-primary btn-lg btn-block" type="submit">Save changes</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+   <p class="mb-1">&copy; 2018 Notes application</p>
+</footer>
