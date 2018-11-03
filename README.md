@@ -20,6 +20,11 @@ The project is still developing.
 ```bash
 npm install
 ```
+## To run the API
+
+```bash
+npm start-api
+```
 ## To run
 
 ```bash
