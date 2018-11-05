@@ -3,13 +3,13 @@ This is a simple prototype notes application based on pure JavaScript ES6. You c
 
 ## Applicationa based on:
 
-* Pure JavaScriptES6,
+* JavaScript ES6,
 * Webpack,
 * API based on simple local JSON server,
-* Bootstrap,
-* Page for Routing,
+* Bootstrap for interface and layout look,
+* Page lib for Routing,
 * Showdown for Markdown,
-* ES6 polyfills to support older browsers.
+* ES6 polyfills to support older browsers,
 * Axios for Promises.
 
 The project is still developing.
