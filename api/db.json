@@ -3,25 +3,25 @@
     {
       "title": "Sample 1",
       "lastModified": 1540909604903,
-      "id": 9,
+      "id": 1,
       "body": "Sample text..."
     },
     {
       "title": "Sample 2",
       "lastModified": 1540843812807,
-      "id": 10,
+      "id": 2,
       "body": "Sample text 2"
     },
     {
       "title": "Sample 3",
       "lastModified": 1540843812807,
-      "id": 10,
+      "id": 3,
       "body": "Sample text 3"
     },
     {
       "title": "Sample 4",
       "lastModified": 1540843812807,
-      "id": 10,
+      "id": 4,
       "body": "Sample text 4"
     }
   ]
