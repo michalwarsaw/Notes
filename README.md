@@ -1,5 +1,5 @@
 # Notes Application
-This is a simple prototype notes application based on pure JavaScript ES6. You can dynamic add a new note without reloading the whole page, also you can create notes in the MARKDOWN format and using the preview button to see how it looks converted to the HTML looks. Project is based on a local api for database using.
+This is a simple prototype notes application based on pure JavaScript ES6. It allows you to dynamically add a new note without reloading the whole page. You can also create notes in the MARKDOWN format and, using the preview buton, see what the application, converted to HTML, looks like. Project is based on a local api for database using.
 
 ## Applicationa based on:
 
