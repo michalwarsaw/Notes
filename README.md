@@ -29,3 +29,4 @@ npm start-api
 ```bash
 npm start
 ```
+Application inspired by Jakub Jurkian.
