@@ -15,3 +15,9 @@ const init = noteId => {
 };
 
 export default init;
+
+// editor - whole JS of app
+
+// notes-sidebar - JS of left sidebar
+
+// single-note - JS of editor window
