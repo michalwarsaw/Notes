@@ -17,14 +17,14 @@ const generateNoteHTML = (note, activeNoteId) => {
 };
 
 const generateNotesList = (notes, activeNoteId) => {
-   const html = notes
-      .filter(note =>
-         normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase()))
-      )
-      .map(note => generateNoteHTML(note, activeNoteId))
-      .join('');
+    const html = notes
+        .filter(note =>
+            normalizeText(note.title).includes(normalizeText(searchBox.getSearchPhrase()))
+        ) // filtering and returning 
+        .map(note => generateNoteHTML(note, activeNoteId)) // iterates every item of arrary and return it to  generateNoteHTML and const html
+        .join(''); // after iteration removing "," between <li>,<li> ; join('') return <li><li>
 
-   DOM().notesListEl.innerHTML = html;
+    DOM().notesListEl.innerHTML = html;
 };
 
 const init = (notes, activeNoteId) => {
